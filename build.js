@@ -9033,6 +9033,18 @@ exports.default = new _vue2.default();
                 this.question = '';
             }
         }
+    },
+    created() {
+        this.$http.jsonp('http://query.yahooapis.com/v1/public/yql', {
+            params: {
+                q: "select * from json where url=\"http://api.apiopen.top/musicRankingsDetails?type=1\"",
+                format: "json"
+            }
+        }).then(resp => {
+            console.log(resp);
+        }, response => {
+            console.log("发送失败" + response.status);
+        });
     }
 
 });
