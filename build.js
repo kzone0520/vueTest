@@ -9006,7 +9006,7 @@ exports.default = new _vue2.default();
             console.log('触发了jsonp请求');
             this.$http.jsonp('https://query.yahooapis.com/v1/public/yql', {
                 params: {
-                    q: "select * from json where url=\"http://api.qingyunke.com/api.php?key=free&appid=0&msg=" + this.question + "\"",
+                    q: "select * from json where url=\"https://api.qingyunke.com/api.php?key=free&appid=0&msg=" + this.question + "\"",
                     format: "json"
                 }
             }).then(resp => {
